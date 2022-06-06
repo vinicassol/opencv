@@ -48,14 +48,17 @@ Com o projeto criado, precisamos observar algumas configurações:
 ![image](https://user-images.githubusercontent.com/20646897/172242103-6ec3057b-ba1d-4f7c-b76b-6459310f7040.png)
    * Nas opções do Vinculador (Linker), em Entrada (Input) precisamos adicionar a DLL do OpenCV nos arquivos de dependências adicionais. Neste campo, adicionamos a DLL de Debug que, nesta versão se chama ``opencv_world455d.lib`` e pode ser encontrada no diretório ``opencv\build\x64\vc15\lib``
   ![image](https://user-images.githubusercontent.com/20646897/172244647-e83bd50c-4d95-4c8f-bf42-b882710ad142.png)
+  * Em propriedades de configuração --> depuração, setar em Ambiente, o caminho do diretório de DLLs. Adicione o caminho do diretório ``\opencv\build\x64\vc15\bin`` de acordo com a instalação em seu computador.
+   ![image](https://user-images.githubusercontent.com/20646897/172255682-ca1e1f1b-cdba-4a3e-8d6e-dd0036a0986a.png)
+
 
 
 ## Hello World
 O código a seguir, pode ser executado para verificar a configuração foi finalizada com sucesso:
 
 <pre><code>
-  #include <iostream>
-  #include <opencv2/opencv.hpp>
+  #include < iostream >
+  #include < opencv2/opencv.hpp >
   using namespace std;
   using namespace cv;
   
